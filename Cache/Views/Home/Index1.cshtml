@@ -1,0 +1,21 @@
+﻿
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <h2 id="data"></h2>
+    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+</div>
+
+<button id="query">查詢</button>
+
+
+<script>
+    document.getElementById('query').addEventListener('click', function () {
+        $.ajax({
+            url:'/Home/Query?Key=Index1',
+            type:'get',
+            success:function(response){
+                document.getElementById('data').innerHTML = response;
+            }
+        })
+    })
+</script>
