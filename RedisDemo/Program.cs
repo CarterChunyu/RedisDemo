@@ -22,7 +22,15 @@ try
     {
         //new RedisListTest().ApiShow();
         //new RedisListTest().BlogShow();
-        new RedisListTest().QueueStack();
+        //new RedisListTest().QueueStack();
+    }
+    {
+        //new RedisSetTest().ShowApi();
+        //new RedisSetTest().FriendManagerShow();
+    }
+    {
+        //new RedisZSetTest().ShowApi();
+        await new RedisZSetTest().ZSetRankShow();
     }
 }
 catch(Exception ex)
